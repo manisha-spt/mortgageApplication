@@ -8,5 +8,5 @@ import com.bank.mortgageApp.entity.UserDetails;
 @Repository
 public interface UserRepository extends JpaRepository<UserDetails, Integer> {
 
-	UserDetails findByMobileNumber(long mobileNumber);
+	UserDetails findByMobileNumber(Long mobileNumber);
 }

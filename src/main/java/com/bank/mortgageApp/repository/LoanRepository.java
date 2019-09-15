@@ -12,12 +12,9 @@ public interface LoanRepository extends JpaRepository<LoanDetails, Integer>{
 	
 	//FetchLoanDetails API(api-1)
 	// to populate list of loan details by eligible amount
-	List<LoanDetails> findByLoanAmount(Double eligibleAmount);
+	List<LoanDetails> findByLoanAmountLessThanEqual(Double eligibleAmount);
 	
-	
-	//LoanApply
-	LoanDetails save(Integer LoanId);
-	
+		
 	
 	
 }

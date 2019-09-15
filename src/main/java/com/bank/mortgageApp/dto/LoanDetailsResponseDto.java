@@ -1,17 +1,6 @@
-package com.bank.mortgageApp.entity;
+package com.bank.mortgageApp.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="Loan_Details")
-public class LoanDetails {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class LoanDetailsResponseDto {
 	private Integer loanId;
 	private Double loanAmount;
 	private Integer tenure;
@@ -47,5 +36,5 @@ public class LoanDetails {
 	public void setRateOfInterest(Double rateOfInterest) {
 		this.rateOfInterest = rateOfInterest;
 	}
-		
+
 }

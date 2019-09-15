@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class UserDetails {
@@ -11,6 +12,24 @@ public class UserDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer userId;
+	private String lastName;
+	private String DOB;
+	private Long mobileNumber;
+	private String email;
+	private String propertyName;
+	private String propertyType;
+	private Double propertyValue;
+	
+	@OneToOne
+	private LoanDetails loanDetails;
+	
+	
+	public LoanDetails getLoanDetails() {
+		return loanDetails;
+	}
+	public void setLoanDetails(LoanDetails loanDetails) {
+		this.loanDetails = loanDetails;
+	}
 	public Integer getUserId() {
 		return userId;
 	}
@@ -60,11 +79,11 @@ public class UserDetails {
 		this.propertyType = propertyType;
 	}
 	private String firstName;
-	private String lastName;
-	private String DOB;
-	private Long mobileNumber;
-	private String email;
-	private String propertyName;
-	private String propertyType;
+	public Double getPropertyValue() {
+		return propertyValue;
+	}
+	public void setPropertyValue(Double propertyValue) {
+		this.propertyValue = propertyValue;
+	}
 
 }

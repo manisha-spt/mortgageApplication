@@ -1,5 +1,8 @@
 package com.bank.mortgageApp.util;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ApplicationUtilityClass {
 	
 	public double calculateEligibleAmount(double amount) {
